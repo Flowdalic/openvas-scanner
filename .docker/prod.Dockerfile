@@ -14,6 +14,11 @@ RUN apt-get update && apt-get install --no-install-recommends --no-install-sugge
     libjson-glib-1.0-0 \
     libksba8 \
     libnet1 \
+    nmap \
+    libcap2-bin \
+    snmp \
+    netdiag \
+    pnscan \
     && rm -rf /var/lib/apt/lists/*
 COPY --from=feed /opt/greenbone/feed/plugins /var/lib/openvas/plugins
 COPY --from=build /install/ /
